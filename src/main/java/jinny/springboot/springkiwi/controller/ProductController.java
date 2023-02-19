@@ -16,8 +16,8 @@ public class ProductController {
 
 	private final ProductService productService;
 
-	@GetMapping(value = "{number}")
-	public ResponseEntity<ProductResponseDTO> getProduct(@RequestParam Long number) {
+	@GetMapping(value = "/{number}")
+	public ResponseEntity<ProductResponseDTO> getProduct(@PathVariable Long number) {
 		ProductResponseDTO productResponseDTO = productService.getProduct(number);
 
 		return ResponseEntity.ok(productResponseDTO);
@@ -38,7 +38,7 @@ public class ProductController {
 	}
 
 	@DeleteMapping("/{number}")
-	public ResponseEntity<String> deleteProduct(@RequestParam Long number) throws Exception {
+	public ResponseEntity<String> deleteProduct(@PathVariable Long number) throws Exception {
 		productService.deleteProduct(number);
 
 		return ResponseEntity.ok("Deleted.");

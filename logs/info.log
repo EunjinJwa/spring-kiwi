@@ -63,3 +63,119 @@
 [2023-02-19 00:10:48.683] [INFO ] [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
 [2023-02-19 00:10:48.683] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
 [2023-02-19 00:10:48.685] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2023-02-19 01:28:45.380] [WARN ] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m58s410ms).
+[2023-02-19 01:45:26.537] [WARN ] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s141ms).
+[2023-02-19 02:03:13.816] [WARN ] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m17s274ms).
+[2023-02-19 02:42:39.966] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-02-19 02:42:39.976] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-02-19 02:42:40.004] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-02-19 15:51:42.013] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 4397 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 15:51:42.029] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 15:51:44.216] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 15:51:44.217] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 15:51:44.220] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 3 ms
+[2023-02-19 15:51:44.292] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 2.918 seconds (JVM running for 4.549)
+[2023-02-19 15:52:09.427] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 4426 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 15:52:09.435] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 15:52:11.679] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 15:52:11.680] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 15:52:11.683] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 3 ms
+[2023-02-19 15:52:11.768] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 2.989 seconds (JVM running for 4.46)
+[2023-02-19 15:52:11.924] [WARN ] [main] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'number' for method parameter type Long is not present]
+[2023-02-19 15:53:58.398] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 4524 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 15:53:58.411] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 15:54:00.624] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 15:54:00.625] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 15:54:00.629] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 4 ms
+[2023-02-19 15:54:00.719] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.019 seconds (JVM running for 4.453)
+[2023-02-19 15:54:00.872] [WARN ] [main] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'number' for method parameter type Long is not present]
+[2023-02-19 15:54:29.869] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 4557 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 15:54:29.883] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 15:54:32.121] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 15:54:32.121] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 15:54:32.125] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 4 ms
+[2023-02-19 15:54:32.224] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.096 seconds (JVM running for 4.673)
+[2023-02-19 15:56:31.710] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 4664 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 15:56:31.717] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 15:56:33.916] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 15:56:33.916] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 15:56:33.919] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 3 ms
+[2023-02-19 15:56:34.014] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 2.962 seconds (JVM running for 4.361)
+[2023-02-19 16:06:37.411] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5196 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:06:37.421] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:06:39.754] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:06:39.754] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:06:39.765] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 11 ms
+[2023-02-19 16:06:39.910] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.181 seconds (JVM running for 4.716)
+[2023-02-19 16:09:18.359] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5335 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:09:18.371] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:09:20.679] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:09:20.680] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:09:20.688] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 8 ms
+[2023-02-19 16:09:20.785] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.09 seconds (JVM running for 4.499)
+[2023-02-19 16:10:13.404] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5386 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:10:13.415] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:10:15.702] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:10:15.703] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:10:15.708] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 5 ms
+[2023-02-19 16:10:15.761] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.141 seconds (JVM running for 4.578)
+[2023-02-19 16:12:10.458] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5497 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:12:10.468] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:12:12.773] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:12:12.774] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:12:12.786] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 12 ms
+[2023-02-19 16:12:12.890] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.146 seconds (JVM running for 4.616)
+[2023-02-19 16:13:35.684] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5573 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:13:35.699] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:13:37.963] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:13:37.963] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:13:37.969] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 6 ms
+[2023-02-19 16:13:38.020] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.003 seconds (JVM running for 4.387)
+[2023-02-19 16:16:38.072] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5733 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:16:38.086] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:16:40.463] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:16:40.464] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:16:40.470] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 6 ms
+[2023-02-19 16:16:40.571] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.245 seconds (JVM running for 4.704)
+[2023-02-19 16:17:11.487] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5770 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:17:11.500] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:17:13.765] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:17:13.765] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:17:13.771] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 6 ms
+[2023-02-19 16:17:13.864] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.095 seconds (JVM running for 4.49)
+[2023-02-19 16:17:31.280] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5792 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:17:31.291] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:17:33.580] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:17:33.580] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:17:33.587] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 7 ms
+[2023-02-19 16:17:33.698] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.085 seconds (JVM running for 4.563)
+[2023-02-19 16:17:52.233] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5815 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:17:52.243] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:17:54.492] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:17:54.492] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:17:54.500] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 8 ms
+[2023-02-19 16:17:54.595] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.042 seconds (JVM running for 4.517)
+[2023-02-19 16:18:25.482] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5855 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:18:25.493] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:18:27.741] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:18:27.742] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:18:27.748] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 6 ms
+[2023-02-19 16:18:27.851] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.026 seconds (JVM running for 4.464)
+[2023-02-19 16:19:55.085] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5937 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:19:55.094] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:19:57.478] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:19:57.478] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:19:57.482] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 4 ms
+[2023-02-19 16:19:57.539] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.143 seconds (JVM running for 4.675)
+[2023-02-19 16:20:38.601] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 5978 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 16:20:38.612] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 16:20:40.881] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 16:20:40.881] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 16:20:40.888] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 7 ms
+[2023-02-19 16:20:40.990] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.083 seconds (JVM running for 4.529)
+[2023-02-19 17:38:30.133] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Starting ProductControllerTest using Java 1.8.0_333 on Eunjinui-MacBookAir.local with PID 10223 (started by eunjin in /Users/eunjin/dev-workspace/spring-kiwi)
+[2023-02-19 17:38:30.142] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-02-19 17:38:32.531] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-02-19 17:38:32.531] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-02-19 17:38:32.535] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 4 ms
+[2023-02-19 17:38:32.607] [INFO ] [main] jinny.springboot.springkiwi.controller.ProductControllerTest Started ProductControllerTest in 3.252 seconds (JVM running for 4.801)

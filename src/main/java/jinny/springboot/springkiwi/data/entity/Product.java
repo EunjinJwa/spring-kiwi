@@ -1,11 +1,14 @@
 package jinny.springboot.springkiwi.data.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter @Setter
 @Entity
 @Table(name = "product")

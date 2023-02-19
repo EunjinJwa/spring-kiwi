@@ -1,12 +1,12 @@
 package jinny.springboot.springkiwi.data.dto;
 
 import jinny.springboot.springkiwi.data.entity.Product;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
+@EqualsAndHashCode
+@Builder
 @Getter @Setter
 @AllArgsConstructor
 public class ProductDTO {
