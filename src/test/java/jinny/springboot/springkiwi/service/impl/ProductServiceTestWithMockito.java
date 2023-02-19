@@ -18,7 +18,7 @@ import static org.mockito.Mockito.verify;
 class ProductServiceTestWithMockito {
 
 	private ProductService productService;
-	private ProductDAO productDAO = Mockito.mock(ProductDAO.class);		// 스프링 빈에 등록하지 않고 Mockito 객체를 직접 생성하여 초기화함. 
+	private ProductDAO productDAO = Mockito.mock(ProductDAO.class);		// 스프링 빈에 등록하지 않고 Mockito 객체를 직접 생성하여 초기화함.
 
 
 	@BeforeEach
