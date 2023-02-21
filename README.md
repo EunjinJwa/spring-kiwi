@@ -24,3 +24,6 @@ docker stop [container]
 docker start [container]
 ```
 
+### Spring actuator
+기본 endpoint : /actuator
+참고문서 : https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html
