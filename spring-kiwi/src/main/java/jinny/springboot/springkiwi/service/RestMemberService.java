@@ -12,11 +12,10 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
 @RequiredArgsConstructor
-@Service
-public class RestMemberService {
+//@Service
+public class RestMemberService implements RequestMemberService {
 
 	private final RestTemplate restTemplate;
-	private final RestTemplateService restTemplateService;
 
 	public String getName() {
 		URI uri = UriComponentsBuilder
@@ -38,7 +37,7 @@ public class RestMemberService {
 				.path("/api/v1/web-api/{name}")
 				.encode()
 				.build()
-				.expand("getKassy")
+				.expand("Rest Kassy")
 				.toUri();
 
 		System.out.println("restTemplate: " + restTemplate);
@@ -57,8 +56,6 @@ public class RestMemberService {
 				.build()
 				.toUri();
 
-		System.out.println("restTemplateService.restTemplate(): " + restTemplateService.restTemplate());
-		System.out.println("restTemplate: " + restTemplate);
 		ResponseEntity<String> responseEntity = restTemplate.getForEntity(uri, String.class);
 
 		return responseEntity.getBody();
@@ -109,35 +106,18 @@ public class RestMemberService {
 		return responseEntity;
 	}
 
-	public String callLongTimeWithRestBean() {
+	public String callLongTime(int second) {
 		URI uri = UriComponentsBuilder
 				.fromUriString("http://localhost:8082")
-				.path("/api/v1/web-api/time-long")
+				.path("/api/v1/web-api/time-long/{second}")
 				.encode()
 				.build()
+				.expand(second)
 				.toUri();
 
-		System.out.println("restTemplate: " + restTemplate);
 		ResponseEntity<String> responseEntity = restTemplate.getForEntity(uri, String.class);
 
 		return responseEntity.getBody();
 	}
-
-	public String callLongTimeWithNewRest() {
-		URI uri = UriComponentsBuilder
-				.fromUriString("http://localhost:8082")
-				.path("/api/v1/web-api/time-long")
-				.encode()
-				.build()
-				.toUri();
-
-		RestTemplate restTemplateNew = new RestTemplate();
-		System.out.println("restTemplate: " + restTemplate);
-		ResponseEntity<String> responseEntity = restTemplateNew.getForEntity(uri, String.class);
-
-		return responseEntity.getBody();
-	}
-
-
 
 }

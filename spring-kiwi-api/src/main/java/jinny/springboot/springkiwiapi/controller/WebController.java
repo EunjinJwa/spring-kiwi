@@ -52,9 +52,9 @@ public class WebController {
 		return ResponseEntity.status(HttpStatus.OK).body(memberDTO);
 	}
 
-	@GetMapping("/time-long")
-	public String takeLongTime() throws InterruptedException {
-		Thread.sleep(30000);
+	@GetMapping("/time-long/{second}")
+	public String takeLongTime(@PathVariable Integer second) throws InterruptedException {
+		Thread.sleep(second*1000);
 		return "OK";
 	}
 
