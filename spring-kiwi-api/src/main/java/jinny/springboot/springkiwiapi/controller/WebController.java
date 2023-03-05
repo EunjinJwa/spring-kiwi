@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.stream.IntStream;
+
 @RequestMapping("/api/v1/web-api")
 @RestController
 public class WebController {
@@ -54,7 +56,15 @@ public class WebController {
 
 	@GetMapping("/time-long/{second}")
 	public String takeLongTime(@PathVariable Integer second) throws InterruptedException {
-		Thread.sleep(second*1000);
+		IntStream.range(0, second)
+						.forEach(i -> {
+							try {
+								System.out.println(i);
+								Thread.sleep(1000);
+							} catch (InterruptedException e) {
+								throw new RuntimeException(e);
+							}
+						});
 		return "OK";
 	}
 

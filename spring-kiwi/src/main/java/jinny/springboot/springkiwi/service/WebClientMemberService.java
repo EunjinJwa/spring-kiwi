@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.Disposable;
 import reactor.core.publisher.Mono;
 
 @RequiredArgsConstructor
@@ -54,12 +55,39 @@ public class WebClientMemberService implements RequestMemberService {
 
 	@Override
 	public ResponseEntity<MemberDTO> postWithParamAndBody() {
-		return null;
+		MemberDTO memberDTO = new MemberDTO();
+		memberDTO.setName("kassy");
+		memberDTO.setEmail("kassy@gmail.com");
+		memberDTO.setOrganization("org");
+
+		ResponseEntity<MemberDTO> responseEntity = webClient.post()
+				.uri(uriBuilder -> uriBuilder
+						.path("/api/v1/web-api")
+						.queryParam("name", "q kassy")
+						.queryParam("email", "q kassy@gmail.com")
+						.build())
+				.bodyValue(memberDTO)
+				.retrieve()
+				.toEntity(MemberDTO.class)
+				.block();
+		return responseEntity;
 	}
 
 	@Override
 	public ResponseEntity<MemberDTO> postWithHeader() {
-		return null;
+		MemberDTO memberDTO = new MemberDTO();
+		memberDTO.setName("kassy");
+		memberDTO.setEmail("kassy@gmail.com");
+		memberDTO.setOrganization("org");
+
+		ResponseEntity<MemberDTO> responseEntity = webClient.post()
+				.uri("/api/v1/web-api/add-header")
+				.header("my-header", "Kassy-Kiwi")
+				.bodyValue(memberDTO)
+				.retrieve()
+				.toEntity(MemberDTO.class)
+				.block();
+		return responseEntity;
 	}
 
 	@Override
@@ -70,7 +98,7 @@ public class WebClientMemberService implements RequestMemberService {
 				.bodyToMono(String.class)
 				.subscribe(this::printResult);		// 비동기 콜백 함수
 
-		return null;
+		return "비동기 요청";
 	}
 
 	private void printResult(String result) {
