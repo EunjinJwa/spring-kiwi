@@ -26,26 +26,28 @@ import java.util.List;
 public class JwtTokenProvider {
 
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
 	private final UserDetailsService userDetailsService;
 
-	@Value("${spring.jwt.secret}")
+	@Value("${springboot.jwt.secret}")
 	private String secretKey = "secretKey";
-	private final long tokenValidMillisecond = 1000L * 60 * 60;
+	private final long tokenValidMillisecond = 60 * 60 * 1000;
 
 	@PostConstruct
 	protected void init() {
-		logger.info("[init] JwtTokenProvider secretKey 초기화 시작");
+		logger.info("[init] JwtTokenProvider 내 secretKey 초기화");
 		secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes(StandardCharsets.UTF_8));
-		logger.info("[init] JwtTokenProvider secretKey 초기화 완료");
 	}
+
+	/*
+	===============================================================================================
+	로그인 인증 성공시 토큰 생성
+	===============================================================================================
+	 */
 
 	public String createToken(String userUid, List<String> roles) {
 		logger.info("[createToken] 토큰 생성 시작");
-
-		Claims claims = Jwts.claims().setSubject(userUid);		// Claims : JWT 토큰에 포함되는 정보 속성
+		Claims claims = Jwts.claims().setSubject(userUid);
 		claims.put("roles", roles);
-
 		Date now = new Date();
 
 		String token = Jwts.builder()
@@ -55,45 +57,51 @@ public class JwtTokenProvider {
 				.signWith(SignatureAlgorithm.HS256, secretKey)
 				.compact();
 
-		logger.info("[createToken] 토큰 생성 완료");
 		return token;
 	}
 
-	/**
-	 * ==================================
-	 * Request Token 검증
-	 * ==================================
-	 * */
+
+	/*
+	===============================================================================================
+	Request 의 토큰에 대한 인증/인가
+	===============================================================================================
+	 */
 
 	public String resolveToken(HttpServletRequest request) {
-		logger.info("[resolveToken] HTTP 헤더에서 Token 값 추출");
+		logger.info("[resolveToken] Http 헤더에서 Token값 추출");
 		return request.getHeader("X-AUTH-TOKEN");
 	}
 
 	public boolean validateToken(String token) {
-		logger.info("[validateToken] 토큰 유효 체크 시작");
+		logger.info("[validationToken] 토큰 유효성 체크 시작");
 		try {
 			Jws<Claims> claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);
 
 			return !claims.getBody().getExpiration().before(new Date());
 		} catch (Exception e) {
-			logger.info("[validateToken] 토큰 유효성 체크 예외 발생");
+			logger.error("[validationToken] 토큰 유효성 체크 예외 발생");
 			return false;
 		}
 	}
-	public Authentication getAuthentication(String token) {
-		logger.info("[getAuthentication] 토큰 인증 정보 조회 시작");
-		UserDetails userDetails = userDetailsService.loadUserByUsername(this.getUsername(token));
-		logger.info("[getAuthentication] 토큰 인증 정보 조회 완료");
 
+	/**
+	 * 필터에서 인증이 성공했을 때 SecurityContextHolder에 저장할 Authentication을 생성하는 메서드.
+	 * UsernamePasswordAuthenticationToken : Authentication을 구하는 방법 중 하나.
+	 * @param token
+	 * @return
+	 */
+	public Authentication getAuthentication(String token) {
+		logger.info("[getAuthentication] 토큰 인증정보 조회 시작");
+
+		UserDetails userDetails = userDetailsService.loadUserByUsername(this.getUsername(token));
 		return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
 	}
 
 	private String getUsername(String token) {
 		logger.info("[getUsername] 토큰 기반 회원 구별 정보 추출");
-		String info = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().getSubject();
-		logger.info("[getUsername] 토큰 기반 회원 구별 정보 추출 완료, info : {}", info);
-		return info;
+
+		String subject = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().getSubject();
+		return subject;
 	}
 
 

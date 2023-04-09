@@ -19,18 +19,22 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	private final JwtTokenProvider jwtTokenProvider;
 
+
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 		String token = jwtTokenProvider.resolveToken(request);
-		logger.info("[doFilterInternal] token값 추출 완료. token: {}", token);
+		logger.info("[doFilterInternal] token 추출 완료 {}", token);
 
-		logger.info("[doFilterInternal] token값 유효성 체크 시작");
+		logger.info("[doFilterInternal] token 유효성 체크 시작");
 		if (token != null && jwtTokenProvider.validateToken(token)) {
 			Authentication authentication = jwtTokenProvider.getAuthentication(token);
+			// SecurityContextHolder에 추가
 			SecurityContextHolder.getContext().setAuthentication(authentication);
-			logger.info("[doFilterInternal] token값 유효성 체크 완료");
+			logger.info("[doFilterInternal] SecurityContextHolder에 authentication 추가");
 		}
 
-		filterChain.doFilter(request, response);
+		filterChain.doFilter(request, response);		// servlet 실행. 이후 로직은 서블릿 실행 후 실행됨.
+
+		logger.info("[doFilterInternal][TEST] doFilter() 후 로직인데, 언제 실행되는지 기록 용");
 	}
 }
