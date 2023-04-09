@@ -1,11 +1,13 @@
 package jinny.springboot.springkiwi.data.dao;
 
+import com.google.common.collect.ImmutableList;
 import jinny.springboot.springkiwi.data.entity.Product;
 import jinny.springboot.springkiwi.data.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -23,6 +25,11 @@ public class ProductDAOImpl implements ProductDAO {
 	public Product selectProduct(Long number) {
 		Optional<Product> selectedProduct = productRepository.findById(number);
 		return selectedProduct.orElse(null);
+	}
+
+	@Override
+	public List<Product> selectProducts() {
+		return ImmutableList.copyOf(productRepository.findAll());
 	}
 
 	@Override

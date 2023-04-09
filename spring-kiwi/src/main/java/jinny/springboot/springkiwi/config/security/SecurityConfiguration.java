@@ -23,7 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	 */
 	@Override
 	public void configure(WebSecurity webSecurity) throws Exception {
-		webSecurity.ignoring().antMatchers("/v2/api-docs", "swagger-resources/**", "/swagger-ui.html", "webjars/**", "/swagger/**", "/sign-api/exception");
+		webSecurity.ignoring().antMatchers("/v2/api-docs", "/swagger-resources/**", "/swagger-ui.html", "/webjars/**", "/swagger/**", "/sign-api/exception");
 	}
 
 	@Override
@@ -34,9 +34,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and()
 				.authorizeRequests()
-				.antMatchers("sign-api/sign-in", "sign-api/sign-up", "sign-api/exception").permitAll()
-				.antMatchers(HttpMethod.GET, "/product/**").permitAll()
+				.antMatchers("/sign-api/sign-in", "/sign-api/sign-up", "/sign-api/exception").permitAll()
+				.antMatchers(HttpMethod.GET, "/api/product/**").permitAll()
 				.antMatchers("**exception**").permitAll()
+				.antMatchers("**error**").permitAll()
 				.anyRequest().hasRole("ADMIN")
 				.and()
 				.exceptionHandling().accessDeniedHandler(new CustomAccessDeniedHandler())		 // 권한 확인 과정에서의 예외 처리

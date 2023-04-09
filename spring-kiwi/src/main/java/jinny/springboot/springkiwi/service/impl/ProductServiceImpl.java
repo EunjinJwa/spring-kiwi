@@ -8,6 +8,9 @@ import jinny.springboot.springkiwi.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RequiredArgsConstructor
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -41,5 +44,13 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void deleteProduct(Long number) throws Exception {
 		productDAO.deleteProduct(number);
+	}
+
+	@Override
+	public List<ProductResponseDTO> getProductAll() {
+		List<Product> products = productDAO.selectProducts();
+		return products.stream()
+				.map(ProductResponseDTO::from)
+				.collect(Collectors.toList());
 	}
 }

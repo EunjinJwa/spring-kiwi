@@ -2,7 +2,8 @@ package jinny.springboot.springkiwi.service;
 
 import jinny.springboot.springkiwi.data.dto.ProductDTO;
 import jinny.springboot.springkiwi.data.dto.ProductResponseDTO;
-import jinny.springboot.springkiwi.data.entity.Product;
+
+import java.util.List;
 
 public interface ProductService {
 
@@ -14,4 +15,5 @@ public interface ProductService {
 
 	void deleteProduct(Long number) throws Exception;
 
+	List<ProductResponseDTO> getProductAll();
 }

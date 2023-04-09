@@ -2,6 +2,7 @@ package jinny.springboot.springkiwi.data.dto;
 
 import jinny.springboot.springkiwi.data.entity.Product;
 import lombok.*;
+import springfox.documentation.annotations.ApiIgnore;
 
 import java.time.LocalDateTime;
 
@@ -15,6 +16,7 @@ public class ProductDTO {
 	private int price;
 	private int stock;
 
+	@ApiIgnore
 	public Product getProductEntity() {
 		Product product = new Product();
 		product.setName(name);
