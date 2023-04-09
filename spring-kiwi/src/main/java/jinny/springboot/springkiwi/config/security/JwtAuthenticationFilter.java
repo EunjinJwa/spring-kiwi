@@ -34,7 +34,5 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 		}
 
 		filterChain.doFilter(request, response);		// servlet 실행. 이후 로직은 서블릿 실행 후 실행됨.
-
-		logger.info("[doFilterInternal][TEST] doFilter() 후 로직인데, 언제 실행되는지 기록 용");
 	}
 }

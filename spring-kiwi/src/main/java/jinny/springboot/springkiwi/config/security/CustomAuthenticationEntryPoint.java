@@ -17,7 +17,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
 
 	@Override
 	public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-		logger.info("[AuthenticationEntryPoint commence] 인증 실패고 exception 발생 : {}", httpServletRequest.getRequestURI());
+		logger.info("[AuthenticationEntryPoint commence] 인증 실패 exception 발생 : {}", httpServletRequest.getRequestURI());
 
 		ObjectMapper objectMapper = new ObjectMapper();
 		EntryPointErrorResponse entryPointErrorResponse = new EntryPointErrorResponse();

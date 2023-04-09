@@ -68,6 +68,6 @@ public class SignController {
 
 		HttpExceptionResponse response = new HttpExceptionResponse(httpStatus.getReasonPhrase(), "400", e.getMessage());
 
-		return new ResponseEntity<>(response, responseHeaders, httpStatus);
+		return new ResponseEntity<>(response, httpStatus);
 	}
 }

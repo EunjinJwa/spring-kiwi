@@ -1,5 +1,10 @@
 package jinny.springboot.springkiwi.data.dto;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
 public class HttpExceptionResponse {
 
 	private String errorType;
