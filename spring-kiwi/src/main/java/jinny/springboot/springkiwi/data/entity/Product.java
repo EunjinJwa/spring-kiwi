@@ -3,7 +3,6 @@ package jinny.springboot.springkiwi.data.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 
 @Builder
@@ -12,7 +11,9 @@ import java.time.LocalDateTime;
 @Getter @Setter
 @Entity
 @Table(name = "product")
-public class Product {
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+public class Product extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,9 +28,16 @@ public class Product {
 	@Column(nullable = false)
 	private Integer stock;
 
-	private LocalDateTime createdAt;
+	@OneToOne(mappedBy = "product")
+	@ToString.Exclude
+	private ProductDetail productDetail;
 
-	private LocalDateTime updatedAt;
+	@ManyToOne
+	@JoinColumn(name = "provider_id")
+	private Provider provider;
 
+	@ManyToOne
+	@JoinColumn(name = "category_id")
+	private Category category;
 
 }
